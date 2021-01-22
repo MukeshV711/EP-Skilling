@@ -1,0 +1,32 @@
+C<html>
+<title>SignUp Page</title>
+<style>body{background-color: yellow;}</style>
+<body>
+<form action="signup" method="post" autocomplete="on">
+<div align="center">
+
+<br><br><br>
+<label for="name" align="center">Name:</label>&emsp;&emsp;<input id="name" type="text" name="name"><br><br>
+
+<label for="regno" align="center">Regno:</label>&emsp;&emsp;<input id="regno" type="number" name="regno"><br><br>
+
+<label for="email" align="center">Email Id:</label>&emsp;&emsp;<input  id="email" type="email" name="email"><br><br>
+
+<label  align="center">Fav Game:</label>&nbsp;<input type="checkbox" id="cricket" name="cricket"><label for id="cricket">Cricket</label>&nbsp;<input id="football" type="checkbox" name="football"><label for="football">Football</label>&nbsp;<input id="chess" type="checkbox" name="chess"><label for="chess">Chess</label><br><br>
+
+<label align="center">Gender:</label>&nbsp;&nbsp;<input type="radio" id="male" name="Male"><label for="male">Male</label>&emsp;&emsp;&ensp;&emsp;&emsp;&emsp;<input type="radio" id="female" name="Female"><label for="female">Female</label><br><br>
+
+<label for="subjects">Fav Subjects:</label>&emsp;&emsp; &emsp; &emsp; &emsp; &emsp; <select id="subjects" name="subjects">
+                              <option value="java">Java</option>
+                              <option value="c">C</option>
+                              <option value="c++">C++</option>
+                              <option value="python">Python</option>
+                          </select><br><br>
+
+<label>Address:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<textarea id="address" name="address" color="gray" rows="7" cols="50">Enter your address</textarea><br><br><br>
+
+<input type="submit" value="SignUp">
+</div>
+</form>
+</body>
+</html>
