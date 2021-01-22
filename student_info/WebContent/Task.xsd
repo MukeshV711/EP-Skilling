@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/07-01" xmlns:txs="http://www.example.org/07-01" elementFormDefault="qualified">
+<xs:element name="students">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="student" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:int" name="no"/>
+              <xs:element type="xs:string" name="name"/>
+              <xs:element type="xs:string" name="email"/>
+              <xs:element type="xs:int" name="marks"/>
+              <xs:element type="xs:string" name="class"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="id" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
