@@ -1,0 +1,73 @@
+<html>
+<head>
+	<title>Validation</title>
+	<script type="text/javascript">
+
+		function fun() {
+			var user = document.f1.user.value;
+			var email = document.f1.email.value;
+			var cbox = document.getElementById("check");
+			var mobile = document.f1.mobile.value;
+
+			var at = parseInt(email.indexOf('@'));
+			var lastat = parseInt(email.lastIndexOf('@'));
+			var dot = parseInt(email.lastIndexOf('.'));
+
+			// console.log(user+" "+email+" "+cbox);
+			if(cbox.checked == false)
+				alert("you should agree all terms and conditions");
+			else if(user=="" || email=="" || mobile=="")
+				alert("username or email or mobile cant be empty");
+			else if(user.length < 8 || email.length < 8)
+				alert("username or email should be atleast 8");
+			else if(mobile.length != 10)
+				alert("mobile no. length should be 10");
+			else {
+
+				if(at==-1 || dot==-1)
+					alert("email should be include both @ and dot.");
+				else if(at != lastat)
+					alert("only 1@ should be there");
+				else if(dot > at && email[dot+2]!=null){
+					for(let i=0;i<email.length;i++) {
+						if(email[i] == '.')
+						{
+							if(email[i+1]!='.' && email[i+2]!='.')
+								alert("ALL GOOD YOU CAN GO AHEAD");
+							else {
+								alert("INVALID");
+								break;
+							}
+
+
+						}
+					}
+
+				}
+				else {
+
+					alert("email format is cant be accepted");
+
+				}
+
+			}
+
+
+
+
+
+		}
+
+	</script>
+</head>
+<body>
+	<form name="f1" onsubmit="fun()" method="post">
+		<input type="text" placeholder="Enter username" name="user"><br>
+		<input type="text" placeholder="Enter Email" name="email"><br>
+		<input type="number" placeholder="Enter Your number" name="mobile"><br>
+		<input type="checkbox" name="checkbox" id="check" value="agree all terms and conditions!">
+		agree all terms and conditions!<br>
+		<button type="submit">submit</button>
+	</form>
+</body>
+</html>
